@@ -2,7 +2,14 @@ import PropTypes from "prop-types";
 import { FaRegClock } from "react-icons/fa";
 
 const RestaurantCard = (props) => {
-  const { img, title, time, price, badgeImg, badgeTitle } = props;
+  const {
+    img,
+    title = "Royal Sushi House",
+    time,
+    price,
+    badgeImg,
+    badgeTitle,
+  } = props;
 
   return (
     <div className="restaurant-card">

@@ -3,7 +3,7 @@ const Logo = () => {
     <a href="">
       <img
         className="main-logo"
-        src="/assets/images/logo.png"
+        src="/assets/images/logo.svg"
         alt="food delivery"
       />
     </a>

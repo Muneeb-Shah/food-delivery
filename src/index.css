@@ -52,7 +52,12 @@ body {
   color: var(--color-body);
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--color-headings);
 }
 
@@ -132,10 +137,31 @@ h1 {
   width: 100%;
 }
 
-.btn__outline {
+.btn__outline-primary {
   background-color: #fff;
   color: var(--color-primary);
   border: 1px solid var(--color-primary);
+  box-shadow: none;
+}
+
+.btn__outline-secondary {
+  box-shadow: none;
+  background-color: #fff;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+}
+
+.btn__outline-body {
+  box-shadow: none;
+  background-color: #fff;
+  color: var(--color-body-lighter);
+  border: 1px solid var(--color-body-lighter);
+}
+
+.btn__remove-btn {
+  background-color: #fff;
+  color: var(--color-body-lighter);
+  box-shadow: none;
 }
 
 /* LOGIN FORM */
@@ -434,7 +460,12 @@ h1 {
 
 .header__left {
   display: flex;
+  align-items: center;
   gap: 48px;
+}
+
+.header__left .form-group {
+  margin-bottom: 0.8rem;
 }
 
 .header__left .form-input {
@@ -545,10 +576,15 @@ h1 {
 /* DEAL SECTION */
 .deal-section {
   display: flex;
+  justify-content: space-between;
   gap: 19px;
+  margin-bottom: 3.2rem;
 }
 
 @media screen and (max-width: 1000px) {
+  .deal-section {
+    height: 304px;
+  }
   .deal__content {
     flex-direction: column-reverse;
   }
@@ -568,6 +604,7 @@ h1 {
 
 @media screen and (max-width: 630px) {
   .deal-section {
+    height: 630px;
     flex-direction: column;
     gap: 3rem;
   }
@@ -627,6 +664,7 @@ h1 {
   grid-template-columns: repeat(6, auto);
   gap: 3rem;
   justify-content: space-between;
+  margin-bottom: 4rem;
 }
 
 @media screen and (max-width: 1150px) {
@@ -712,4 +750,201 @@ h1 {
   height: 20px;
   width: 20px;
   cursor: pointer;
+}
+
+/* RESTAURANTS SECTION  */
+.restaurants-sectoin__heading {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 28px;
+  color: var(--color-headings);
+  margin-bottom: 1.6rem;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 1150px) {
+  .restaurants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .restaurant-card {
+    width: 290px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .restaurants {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .restaurant-card {
+    width: 350px;
+  }
+}
+
+/* USER SETTING ICON */
+.user-setting-icon {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem;
+  height: 72px;
+  width: 350px;
+  border: 1px solid #edeef2;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+}
+
+.user-setting-icon__active {
+  background: #f3f4ff;
+  border: 2px solid #4e60ff;
+}
+
+.user-setting-section__heading {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-headings);
+  margin-bottom: 1.6rem;
+}
+
+.user-setting-icon__icon {
+  height: 40px;
+  width: 40px;
+  background: #edeef2;
+  border-radius: 12px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.user-setting-icon__icon__img {
+  height: 20px;
+  width: 20px;
+}
+
+.user-setting-icon__icon__active {
+  background: #4e60ff;
+}
+
+.user-setting-icon__content {
+  margin-left: 1.2rem;
+}
+
+.user-setting-icon__content__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-headings);
+}
+
+.user-setting-icon__content__desc {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: var(--color-body);
+}
+
+/* USER SETTING FORM */
+.user-setting-form-section__heading {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-headings);
+  margin-bottom: 1.6rem;
+}
+.user-setting-form {
+  border: 1px solid #edeef2;
+  border-radius: 16px;
+  padding: 2rem 1.6rem;
+}
+
+.user-setting-form__heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-headings);
+  margin-bottom: 1.6rem;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.avatar-group__img {
+  height: 88px;
+  width: 88px;
+}
+
+.avatar-group button {
+  height: 44px;
+  width: 83px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.checkbox-group .form-group {
+  margin-bottom: 2.4rem;
+}
+
+.checkbox-group .form-label {
+  font-size: 1.4rem;
+  color: var(--color-headings);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-group__group .btn__outline-body {
+  margin-right: 1.6rem;
+}
+
+@media screen and (max-width: 620px) {
+  .input-group,
+  .checkbox-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .user-setting-form__logout-btn {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 4rem;
+  }
+
+  .btn-group__group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn-group__group button {
+    width: 50%;
+    height: 44px;
+  }
 }
