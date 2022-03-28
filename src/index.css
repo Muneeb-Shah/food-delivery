@@ -621,6 +621,28 @@ h1 {
   margin-top: 1.2rem;
 }
 
+/* FOOD CATEGORY */
+.food-category {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1150px) {
+  .food-category {
+    grid-template-columns: repeat(3, auto);
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .food-icon {
+    height: 80px;
+    width: 100px;
+  }
+}
+
 /* RESTAURANT CARD */
 .restaurant-card {
   width: 350px;

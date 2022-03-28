@@ -6,12 +6,13 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Collapsible from "./components/common/Collapsible";
 import DealSection from "./components/DealSection";
+import FoodCategorySection from "./components/FoodCategorySection";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <DealSection />
+        <FoodCategorySection />
       </div>
     </div>
   );
