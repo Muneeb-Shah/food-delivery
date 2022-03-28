@@ -1,13 +1,693 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --color-primary: #4e60ff;
+  --color-secondary: #fd6d22;
+  --color-headings: #2b2b43;
+  --color-body: #545563;
+  --color-body-lighter: #83859c;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* RESET */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* TYPOGRAPHY */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--color-body);
+}
+
+h1 {
+  color: var(--color-headings);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    max-width: 968px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    max-width: 850px;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .container {
+    max-width: 735px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    max-width: 470px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .container {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    max-width: 330px;
+  }
+}
+
+/* LOGO */
+.main-logo {
+  height: 40px;
+  width: 80px;
+}
+
+/* BUTTONS */
+.btn {
+  background-color: var(--color-primary);
+  padding: 12px 16px;
+  box-shadow: 0px 8px 20px rgba(78, 96, 255, 0.16);
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.btn__block {
+  width: 100%;
+}
+
+.btn__outline {
+  background-color: #fff;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+/* LOGIN FORM */
+.login-form {
+  height: 100vh;
+  max-width: 56%;
+}
+
+.login-form .main-logo {
+  margin-top: 20px;
+  margin-bottom: 128px;
+}
+.login-form .container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+::placeholder {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--color-body-lighter);
+}
+
+.login-form__heading {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 8.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.login-form__desc {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  margin-bottom: 3.2rem;
+}
+
+.form-group {
+  margin-bottom: 2.8rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid #c7c8d2;
+  border-radius: 8px;
+}
+
+.form-group__password {
+  position: relative;
+}
+
+.show-password {
+  position: absolute;
+  top: 33px;
+  right: 15px;
+}
+
+.form-group__checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-bottom: 4rem;
+}
+
+.form-group__checkbox label {
+  display: inline-block;
+  line-height: normal;
+}
+
+.form-group__checkbox input {
+  width: fit-content;
+  margin-right: 1.2rem;
+}
+
+.login-form__submit-btn {
+  margin-bottom: 2.8rem;
+}
+
+.login-form__forgot-password,
+.signup__link {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.3px;
+}
+
+.login-form__forgot-password,
+.login-form__signup {
+  display: block;
+  text-align: center;
+}
+
+.login-form__forgot-password {
+  margin-bottom: 10rem;
+}
+
+/* RATING */
+.stars__star {
+  margin-right: 0.3rem;
+}
+
+.rating__days {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin-left: 0.5rem;
+  color: var(--color-body-lighter);
+}
+
+/* USER REVIEW */
+.user-review {
+  display: flex;
+}
+.user-review__image {
+  height: 33px;
+  width: 33px;
+}
+
+.user-review__content {
+  margin-left: 1.1rem;
+}
+
+.header__name {
+  font-weight: 700;
+  color: var(--color-headings);
+}
+
+.content-desc__content {
+  color: var(--color-headings);
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+/* LOGIN SLIDER */
+.login-slider {
+  height: 100vh;
+  max-width: 44%;
+  background-color: #697bff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-slider .container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 8.4rem 0;
+}
+
+.login-slider__banner {
+  margin-bottom: 6.6rem;
+}
+
+.login-slider__content {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.1px;
+}
+
+.content__heading {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.content__desc {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1350px) {
+  .login-slider {
+    max-width: 50%;
+  }
+
+  .login-slider .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .login-form {
+    max-width: 40%;
+  }
+
+  .login-form .container {
+    max-width: 280px;
+  }
+
+  .login-slider {
+    max-width: 60%;
+  }
+
+  .login-slider .container {
+    width: 90%;
+  }
+}
+
+/* COLLAPSIBLE */
+.collapsible {
+  display: none;
+  flex-direction: column;
+}
+.collapsible .menu-icon {
+  align-self: flex-end;
+}
+.collapsible__list {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  transition: 250ms;
+}
+.expanded {
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.list__link {
+  padding: 1rem;
+  border-bottom: 1px solid #c7c8d2;
+}
+.list__link a {
+  color: var(--color-headings);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  .collapsible {
+    display: flex;
+  }
+}
+
+/* NAVBAR */
+.main-nav,
+.main-nav__links,
+.main-nav__user {
+  display: flex;
+}
+
+.main-nav {
+  height: inherit;
+  max-width: 390px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.main-nav__links {
+  gap: 2.8rem;
+}
+
+.main-nav__links li a {
+  color: var(--color-headings);
+  font-weight: 700;
+}
+
+.main-nav__user {
+  gap: 1.7rem;
+}
+
+.main-nav__user img {
+  height: 48px;
+  width: 48px;
+}
+
+.menu-icon {
+  height: 44px;
+  width: 44px;
+}
+
+@media screen and (max-width: 500px) {
+  .main-nav__links {
+    display: none;
+  }
+}
+
+/* HEADER */
+.header__content {
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left {
+  display: flex;
+  gap: 48px;
+}
+
+.header__left .form-input {
+  background-color: #edeef2;
+  height: 40px;
+  width: 224px;
+}
+
+.header__left .show-password {
+  top: 14px;
+  color: var(--color-body-lighter);
+}
+
+@media screen and (max-width: 865px) {
+  .header__left .form-group {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__right {
+    margin-right: 7rem;
+  }
+  .collapsible {
+    margin-top: -65px;
+  }
+}
+
+/* LOGIN PAGE */
+.login-page__content {
+  display: flex;
+}
+.login-form {
+  width: 56%;
+}
+
+@media screen and (max-width: 768px) {
+  .login-page__content {
+    justify-content: center;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+
+  .login-form .container {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .login-slider {
+    display: none;
+  }
+}
+
+/* DEAL */
+.deal {
+  width: 540px;
+  height: 188px;
+}
+
+.deal__content {
+  display: flex;
+  align-items: center;
+  border-radius: 1.6rem;
+}
+
+.cupcake {
+  background-color: #f3f4ff;
+}
+
+.cupcake__discount {
+  color: var(--color-primary);
+}
+
+.burger__discount {
+  color: var(--color-secondary);
+}
+
+.burger {
+  background-color: #fff3ed;
+}
+
+.content__img {
+  height: 188px;
+  width: 290px;
+}
+
+.desc__heading {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.1px;
+  color: var(--color-headings);
+}
+
+.desc__discount {
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 5.6rem;
+  letter-spacing: 0.1px;
+}
+
+.desc__label {
+  color: var(--color-body-lighter);
+}
+
+/* DEAL SECTION */
+.deal-section {
+  display: flex;
+  gap: 19px;
+}
+
+@media screen and (max-width: 1000px) {
+  .deal__content {
+    flex-direction: column-reverse;
+  }
+
+  .content__desc {
+    position: relative;
+    width: 100%;
+    padding: 1.6rem;
+  }
+
+  .desc__label {
+    position: absolute;
+    top: 22px;
+    right: 16px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .deal-section {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .deal {
+    width: 100%;
+    height: 296px;
+  }
+}
+
+/* FOOD ICON  */
+
+.food-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 160px;
+  background-color: #f8f9ff;
+  border: 1px solid #edeef2;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.food-icon:hover {
+  border: 1px solid #697bff;
+}
+
+.food-icon__clicked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 160px;
+  border: 2px solid #4e60ff;
+  background-color: #f3f4ff;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.food-icon__img {
+  height: 24px;
+  width: 24px;
+}
+
+.food-icon__label {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+/* RESTAURANT CARD */
+.restaurant-card {
+  width: 350px;
+  border: 1px solid #edeef2;
+  border-radius: 16px;
+}
+
+.restaurant-card__img {
+  height: 160px;
+}
+
+.restaurant-card__content {
+  position: relative;
+  padding: 1.6rem;
+}
+
+.restaurant-card__content .content__heading {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  margin-bottom: 6px;
+}
+
+.restaurant-card__content .content__time {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
+}
+
+.clock-icon {
+  line-height: 2.2rem;
+}
+
+.content__time .time__time {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--color-body-lighter);
+}
+
+.content__food-badge {
+  width: 70px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #edeef2;
+  border-radius: 100px;
+}
+
+.food-badge__img {
+  height: 12px;
+  width: 12px;
+}
+
+.food-badge__title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.content__cart-icon {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
 }
