@@ -943,6 +943,10 @@ h6 {
     justify-content: space-between;
   }
 
+  .btn-group__group .btn__outline-body {
+    padding: 12px;
+  }
+
   .btn-group__group button {
     width: 50%;
     height: 44px;
