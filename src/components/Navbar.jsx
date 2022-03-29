@@ -14,7 +14,7 @@ const Navbar = () => {
             <a href="#">Deals</a>
           </li>
           <li>
-            <Link to="/user">Profile</Link>
+            <Link to="/">Login</Link>
           </li>
         </ul>
         <div className="main-nav__user">

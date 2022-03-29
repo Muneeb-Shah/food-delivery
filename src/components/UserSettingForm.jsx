@@ -1,5 +1,6 @@
 import Input from "./common/Input";
 import Button from "./common/Button";
+import { Link } from "react-router-dom";
 
 const UserSettingForm = () => {
   return (
@@ -40,10 +41,12 @@ const UserSettingForm = () => {
         </div>
         <hr className="user-setting-form__hr"></hr>
         <div className="btn-group">
-          <Button
-            className="btn btn__outline-secondary user-setting-form__logout-btn"
-            label="Log out"
-          />
+          <Link to="/">
+            <Button
+              className="btn btn__outline-secondary user-setting-form__logout-btn"
+              label="Log out"
+            />
+          </Link>
           <div className="btn-group__group">
             <Button className="btn btn__outline-body" label="Discard changes" />
             <Button className="btn" label="Save changes" />

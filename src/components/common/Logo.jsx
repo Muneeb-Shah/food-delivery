@@ -2,7 +2,7 @@ import Link from "react-router-dom/Link";
 
 const Logo = () => {
   return (
-    <Link to="/">
+    <Link to="/home">
       <img
         className="main-logo"
         src="/assets/images/logo.svg"
