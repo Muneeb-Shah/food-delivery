@@ -32,12 +32,16 @@ const UserSettingForm = () => {
         </div>
         <h6 className="user-setting-form__heading">Email notifications</h6>
         <div className="checkbox-group">
-          <Input type="checkbox" label="New deals" />
-          <Input type="checkbox" label="Password changes" />
-          <Input type="checkbox" label="New restaurants" />
-          <Input type="checkbox" label="Special offers" />
-          <Input type="checkbox" label="Order statuses" />
-          <Input type="checkbox" label="Newsletter" />
+          <Input type="checkbox" label="New deals" id="new-deals" />
+          <Input
+            type="checkbox"
+            label="Password changes"
+            id="password-changes"
+          />
+          <Input type="checkbox" label="New restaurants" id="new-restaurants" />
+          <Input type="checkbox" label="Special offers" id="special-offers" />
+          <Input type="checkbox" label="Order statuses" id="order-statuses" />
+          <Input type="checkbox" label="Newsletter" id="newsletter" />
         </div>
         <hr className="user-setting-form__hr"></hr>
         <div className="btn-group">
