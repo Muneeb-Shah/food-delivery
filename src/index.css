@@ -389,7 +389,8 @@ h6 {
   visibility: visible;
 }
 .list__link {
-  padding: 1rem;
+  padding: 2rem;
+  margin-top: 1rem;
   border-bottom: 1px solid #c7c8d2;
 }
 .list__link a {
