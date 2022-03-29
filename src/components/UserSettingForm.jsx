@@ -20,10 +20,14 @@ const UserSettingForm = () => {
           </div>
         </div>
         <div className="input-group">
-          <Input type="text" label="First name" />
-          <Input type="text" label="Last name" />
-          <Input type="email" label="Email" />
-          <Input type="number" label="Phone number" />
+          <Input type="text" label="First name" placeholder="First Name" />
+          <Input type="text" label="Last name" placeholder="Last Name" />
+          <Input type="email" label="Email" placeholder="Email" />
+          <Input
+            type="number"
+            label="Phone number"
+            placeholder="Phone Number"
+          />
         </div>
         <h6 className="user-setting-form__heading">Email notifications</h6>
         <div className="checkbox-group">
@@ -34,6 +38,7 @@ const UserSettingForm = () => {
           <Input type="checkbox" label="Order statuses" />
           <Input type="checkbox" label="Newsletter" />
         </div>
+        <hr className="user-setting-form__hr"></hr>
         <div className="btn-group">
           <Button
             className="btn btn__outline-secondary user-setting-form__logout-btn"

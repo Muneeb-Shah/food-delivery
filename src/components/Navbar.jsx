@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import Collapsible from "./common/Collapsible";
+import Link from "react-router-dom/Link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
             <a href="">Deals</a>
           </li>
           <li>
-            <a href="">My orders</a>
+            <Link to="/user">Profile</Link>
           </li>
         </ul>
         <div className="main-nav__user">
@@ -25,13 +25,13 @@ const Navbar = () => {
               alt="cart"
             />
           </a>
-          <a href="">
+          <Link to="/user">
             <img
               className="user__profile"
               src="/assets/images/profile.png"
               alt="profile"
             />
-          </a>
+          </Link>
         </div>
       </nav>
     </Fragment>

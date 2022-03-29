@@ -4,7 +4,7 @@ const Collapsible = ({ links }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="collapsible">
+    <div className="collapsible container">
       <button className="menu-icon" onClick={() => setExpanded(!expanded)}>
         <img src="/assets/images/menu.png" alt="menu icon" />
       </button>

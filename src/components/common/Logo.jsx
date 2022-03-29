@@ -1,12 +1,14 @@
+import Link from "react-router-dom/Link";
+
 const Logo = () => {
   return (
-    <a href="">
+    <Link to="/">
       <img
         className="main-logo"
         src="/assets/images/logo.svg"
         alt="food delivery"
       />
-    </a>
+    </Link>
   );
 };
 

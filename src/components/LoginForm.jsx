@@ -1,6 +1,7 @@
 import Input from "./common/Input";
 import Button from "./common/Button";
 import Logo from "./common/Logo";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   return (
@@ -26,11 +27,13 @@ const LoginForm = () => {
           />
           <Input type="checkbox" id="keep-login" label="Keep me logged in" />
 
-          <Button
-            type="submit"
-            label="Login"
-            className="btn btn__block login-form__submit-btn"
-          />
+          <Link to="/home">
+            <Button
+              type="submit"
+              label="Login"
+              className="btn btn__block login-form__submit-btn"
+            />
+          </Link>
         </form>
         <a href="" className="login-form__forgot-password">
           Forgot Password

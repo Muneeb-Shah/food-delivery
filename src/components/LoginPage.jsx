@@ -1,13 +1,7 @@
-import LoginForm from "./LoginForm";
-import LoginSlider from "./LoginSlider";
+import LoginSection from "./LoginSection";
 
 const LoginPage = () => {
-  return (
-    <div className="login-page__content">
-      <LoginForm />
-      <LoginSlider />
-    </div>
-  );
+  return <LoginSection />;
 };
 
 export default LoginPage;
