@@ -647,7 +647,8 @@ h6 {
 }
 
 @media screen and (max-width: 1150px) {
-  .food-icon {
+  .food-icon,
+  .food-icon__clicked {
     height: 80px;
     width: 100px;
   }
@@ -658,14 +659,16 @@ h6 {
     grid-template-columns: repeat(3, auto);
     gap: 1.5rem;
   }
-  .food-icon {
+  .food-icon,
+  .food-icon__clicked {
     height: 80px;
     width: 160px;
   }
 }
 
 @media screen and (max-width: 620px) {
-  .food-icon {
+  .food-icon,
+  .food-icon__clicked {
     height: 80px;
     width: 100px;
   }
