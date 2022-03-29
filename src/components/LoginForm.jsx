@@ -35,12 +35,12 @@ const LoginForm = () => {
             />
           </Link>
         </form>
-        <a href="" className="login-form__forgot-password">
+        <a href="#" className="login-form__forgot-password">
           Forgot Password
         </a>
         <div className="login-form__signup">
           Don't have an account?
-          <a href="" className="signup__link">
+          <a href="#" className="signup__link">
             Sign up
           </a>
         </div>

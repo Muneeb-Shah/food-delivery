@@ -15,7 +15,7 @@ const Collapsible = ({ links }) => {
       >
         {links.map((link) => (
           <li className="list__link">
-            <a href="">{link}</a>
+            <a href="#">{link}</a>
           </li>
         ))}
       </ul>
