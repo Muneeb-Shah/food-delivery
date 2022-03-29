@@ -21,13 +21,24 @@ const UserSettingForm = () => {
           </div>
         </div>
         <div className="input-group">
-          <Input type="text" label="First name" placeholder="First Name" />
-          <Input type="text" label="Last name" placeholder="Last Name" />
-          <Input type="email" label="Email" placeholder="Email" />
+          <Input
+            type="text"
+            label="First name"
+            placeholder="First Name"
+            id="first-name"
+          />
+          <Input
+            type="text"
+            label="Last name"
+            placeholder="Last Name"
+            id="last-name"
+          />
+          <Input type="email" label="Email" placeholder="Email" id="email" />
           <Input
             type="number"
             label="Phone number"
             placeholder="Phone Number"
+            id="phone-number"
           />
         </div>
         <h6 className="user-setting-form__heading">Email notifications</h6>
