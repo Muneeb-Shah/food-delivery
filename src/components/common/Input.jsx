@@ -78,7 +78,6 @@ const Input = ({ type, placeholder, id, label }) => {
 Input.defaultProps = {
   type: "text",
   placeholder: "",
-  id: "id",
   label: "input",
 };
 
